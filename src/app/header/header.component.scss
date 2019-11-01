@@ -6,6 +6,7 @@
     background-color:#5c00e7;
     color: white;
     font-weight: 600;
+    min-width: 400px;
   }
   .spacer {
     flex: 1;
@@ -17,14 +18,6 @@
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-  }
-  .content {
-    display: flex;
-    margin: 32px auto;
-    padding: 0 16px;
-    max-width: 960px;
-    flex-direction: column;
-    align-items: center;
   }
   a:hover {
     text-decoration: none;
