@@ -1,0 +1,12 @@
+<div *ngIf="card">
+    <div cardBackColor [cardId]="card.id" [ngClass]=" {'card-disable':boughtCardId && boughtCardId !== card.id,'card-enable': !boughtCardId}" class="card-element">
+        <h1 class="card-name">{{card.name}}</h1>
+        <h1 *ngIf="card.isBought" class="card-bought">BOUGHT!</h1>
+        <h1 *ngIf="!card.isBought" class="card-amount">{{card.amount}}</h1>
+        <p class="card-desc">{{card.description}}</p>
+        <div class="button-container">
+            <button *ngIf="card.isBought" class="button-col" mat-stroked-button (click)="CancelClick()">CANCEL</button>
+            <button *ngIf="!card.isBought" class="button-col" mat-stroked-button [disabled]="boughtCardId && boughtCardId !== card.id " (click)="BuyClick(card.id)">BUY </button>
+        </div>
+    </div>
+</div>
